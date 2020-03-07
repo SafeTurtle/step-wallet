@@ -1,8 +1,9 @@
 <p align="center">
   <img src="./static/Logo_step_wallet.png" width="1280">
 </p>
-
-![Badge Status](https://img.shields.io/github/package-json/v/SafeTurtle/step-wallet)
+![Badge Status](https://travis-ci.org/SafeTurtle/stepwallet.eth.svg?branch=master)
+![Badge Status](https://img.shields.io/amo/stars/dustman)
+![Badge Status](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2FDaiki_k21)
 
 ## Name
 #### STEP WALLET
@@ -47,8 +48,8 @@ npm start
 
 ## 🎫 Licence
 
-[MIT]()
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
 ## 👀 Author
 
-[tcnksm](https://github.com/Daiki0129)
+[Daiki0129](https://github.com/Daiki0129)
