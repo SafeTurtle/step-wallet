@@ -5,21 +5,14 @@ pull_request:
   branches:
     - development
 jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [10.x]
-
-    steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-      - name: Cd
+check:
+  name: check
+  runs-on: ubuntu-latest
+  steps:
+  - uses: actions/checkout@v1
+  - uses: actions/setup-node@v1
+    with:
+      node-version: '10.15.3'
          run: cd packages/backend
       - name: Npm
         run: npm install
