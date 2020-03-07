@@ -1,22 +1,24 @@
 name: CI
 
 on:
-pull_request:
-  branches:
-    - development
+  pull_request:
+    branches:
+      - master
+
 jobs:
-check:
-  name: check
-  runs-on: ubuntu-latest
-  steps:
-  - uses: actions/checkout@v1
-  - uses: actions/setup-node@v1
-    with:
-      node-version: '10.15.3'
-         run: cd packages/backend
-      - name: Npm
-        run: npm install
-      - name: Lint
-        run: npm run lint
-      - name: Build
-        run: npm run build
+  check:
+    name: check
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '10.15.3'
+    - name: Cd
+      run: cd packages/backend
+    - name: Npm
+      run: npm install
+    - name: Lint
+      run: npm run lint
+    - name: Build
+      run: npm run build
