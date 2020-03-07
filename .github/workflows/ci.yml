@@ -23,7 +23,5 @@ jobs:
       run: cd packages/backend
     - name: Yarn
       run: yarn
-    - name: Lint
-      run: yarn lint
     - name: Build
       run: yarn build
