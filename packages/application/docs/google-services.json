@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "538365545759",
+    "firebase_url": "https://my-contract-wallet-development.firebaseio.com",
+    "project_id": "my-contract-wallet-development",
+    "storage_bucket": "my-contract-wallet-development.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:538365545759:android:d3ef793530a013b070b42a",
+        "android_client_info": {
+          "package_name": "com.daikikunii.MyContractWalletApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "538365545759-37vfkj2bc0mmcnaov4e40qavn68f1om7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZztKOksO3YlHKq301hWkCBIFbYoB6fQQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "538365545759-3qvdpf3st84brep9873297s4p1318qof.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "538365545759-audut0sg98ispigd73gjboh2mskkr66v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "host.exp.exponent"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

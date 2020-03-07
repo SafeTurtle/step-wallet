@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "constract-wallet",
+    "slug": "constract-wallet",
+    "privacy": "public",
+    "sdkVersion": "34.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "version": "1.0.7",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1A1E26"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "packagerOpts": {
+      "config": "./rn-cli.config.js"
+    },
+    "ios": {
+      "bundleIdentifier": "com.daikikunii.MyContractWalletApp",
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "This app uses the camera to scan barcodes on event tickets."
+      },
+      "config": {
+        "googleSignIn": {
+          "reservedClientId": "com.googleusercontent.apps.538365545759-uf0cdohaiesod91ua7rkpandmc0u6lob"
+        }
+      }
+    },
+    "android": {
+      "package": "com.daikikunii.MyContractWalletApp",
+      "permissions": [],
+      "googleServicesFile": "./docs/google-services.json"
+    }
+  }
+}

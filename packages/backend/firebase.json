@@ -1,0 +1,35 @@
+{
+  "functions": {
+    "source": "./",
+    "ignore": [
+      "**/.*",
+      "**/node_modules/**",
+      "**/functions/config.json",
+      "**/functions/src",
+      "**/functions/utlis",
+      "**/tsconfig.json",
+      "**/public"
+    ]
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "emulators": {
+    "firestore": {
+      "port": "PORT"
+    }
+  },
+  "hosting": {
+    "public": "hostings",
+    "ignore": [
+      "firebase.json",
+      "firepit-log.txt",
+      "firestore-debug.log",
+      "**/.*",
+      "**/node_modules/**",
+      "**/tsconfig.json",
+      "**/functions"
+    ]
+  }
+}

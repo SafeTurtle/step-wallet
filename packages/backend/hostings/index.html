@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entering captcha</title>
+
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/7.2.1/firebase-app.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/7.2.1/firebase-auth.js"></script>
+  <script defer src="/__/firebase/7.2.1/firebase-database.js"></script>
+  <script defer src="/__/firebase/7.2.1/firebase-messaging.js"></script>
+  <script defer src="/__/firebase/7.2.1/firebase-storage.js"></script>
+  <!-- initialize the SDK after all desired features are loaded -->
+  <script defer src="/__/firebase/init.js"></script>
+
+  <style media="screen">
+    body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+  </style>
+</head>
+<body>
+<p>Please, enter captcha for continue<p/>
+<button id="continue-btn" style="display:none">Continue to app</button>
+<script>
+  function getToken(callback) {
+    const containerId = 'captcha';
+    const container = document.createElement('div');
+    container.id = containerId;
+    document.body.appendChild(container);
+    var captcha = new firebase.auth.RecaptchaVerifier(containerId, {
+      'size': 'normal',
+      'callback': function(token) {
+        callback(token);
+      },
+      'expired-callback': function() {
+        callback('');
+      }
+    });
+    captcha.render().then(function() {
+      captcha.verify();
+    });
+  }
+
+  function sendTokenToApp(token) {
+    const baseUri = decodeURIComponent(location.search.replace(/^\?appurl\=/, ''));
+    const finalUrl = location.href = baseUri + '/?token=' + encodeURIComponent(token);
+    const continueBtn = document.querySelector('#continue-btn');
+    continueBtn.onclick = function() {
+      window.open(finalUrl, '_blank');
+    };
+    continueBtn.style.display = 'block';
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    getToken(sendTokenToApp);
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+{
+  "abi":{
+    "keyStation": [{"constant":true,"inputs":[],"name":"SIGNER2","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"AUTHORIZED","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"SIGNER1","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"nonce","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"addresses","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[{"name":"_authorized","type":"address"},{"name":"_signer1","type":"address"},{"name":"_signer2","type":"address"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":false,"name":"_authorized","type":"address"},{"indexed":false,"name":"_signer1","type":"address"},{"indexed":false,"name":"_signer2","type":"address"}],"name":"Initialized","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"_previous","type":"address"},{"indexed":false,"name":"_new","type":"address"},{"indexed":false,"name":"_target","type":"uint256"}],"name":"Reset","type":"event"},{"constant":false,"inputs":[{"name":"v","type":"uint8[2]"},{"name":"r","type":"bytes32[2]"},{"name":"s","type":"bytes32[2]"},{"name":"_nonce","type":"uint256"},{"name":"_target","type":"uint256"},{"name":"_new","type":"address"}],"name":"update","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_nonce","type":"uint256"},{"name":"_target","type":"uint256"},{"name":"_new","type":"address"}],"name":"createHash","outputs":[{"name":"","type":"bytes32"}],"payable":false,"stateMutability":"view","type":"function"}],
+    "walletFactory": [{"constant":true,"inputs":[],"name":"AUTHORIZED","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"cloneableWallet","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"keyStation","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"nonce","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[{"name":"_cloneableWallet","type":"address"},{"name":"_keyStation","type":"address"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":false,"name":"wallet","type":"address"},{"indexed":false,"name":"keyStation","type":"address"},{"indexed":false,"name":"full","type":"bool"}],"name":"WalletCreated","type":"event"},{"constant":false,"inputs":[{"name":"v","type":"uint8"},{"name":"r","type":"bytes32"},{"name":"s","type":"bytes32"},{"name":"_nonce","type":"uint256"},{"name":"_cosigner","type":"address"},{"name":"_recover","type":"address"}],"name":"deployCloneWallet","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_nonce","type":"uint256"},{"name":"_cosigner","type":"address"},{"name":"_recover","type":"address"}],"name":"createHash","outputs":[{"name":"","type":"bytes32"}],"payable":false,"stateMutability":"view","type":"function"}],
+    "cloneableWallet": [{"constant":true,"inputs":[],"name":"ERC223_ID","outputs":[{"name":"","type":"bytes4"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_operator","type":"address"},{"name":"_from","type":"address"},{"name":"_tokenId","type":"uint256"},{"name":"_data","type":"bytes"}],"name":"onERC721Received","outputs":[{"name":"","type":"bytes4"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"initialized","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"AUTHORIZED","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"keyStation","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"cosigner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"nonce","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_from","type":"address"},{"name":"_value","type":"uint256"},{"name":"_data","type":"bytes"}],"name":"tokenFallback","outputs":[],"payable":false,"stateMutability":"pure","type":"function"},{"constant":true,"inputs":[],"name":"recover","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_tokenId","type":"uint256"},{"name":"data","type":"bytes"}],"name":"onERC721Received","outputs":[{"name":"","type":"bytes4"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"payable":true,"stateMutability":"payable","type":"fallback"},{"anonymous":false,"inputs":[{"indexed":false,"name":"_cosigner","type":"address"},{"indexed":false,"name":"_recover","type":"address"},{"indexed":false,"name":"_keyStation","type":"address"}],"name":"Authorized","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"_cosigner","type":"address"}],"name":"EmergencyRecovered","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"from","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Received","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"_to","type":"address"},{"indexed":false,"name":"_data","type":"bytes"},{"indexed":false,"name":"success","type":"bool"}],"name":"InvocationSuccess","type":"event"},{"constant":false,"inputs":[{"name":"_cosigner","type":"address"},{"name":"_recover","type":"address"},{"name":"_keyStation","type":"address"}],"name":"init","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"v","type":"uint8[2]"},{"name":"r","type":"bytes32[2]"},{"name":"s","type":"bytes32[2]"},{"name":"_nonce","type":"uint256"},{"name":"_authorized","type":"address"},{"name":"_data","type":"bytes"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"invoke","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"v","type":"uint8[2]"},{"name":"r","type":"bytes32[2]"},{"name":"s","type":"bytes32[2]"},{"name":"_nonce","type":"uint256"},{"name":"_cosigner","type":"address"},{"name":"_data","type":"bytes"}],"name":"emergencyRecovery","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_nonce","type":"uint256"},{"name":"_address","type":"address"},{"name":"_data","type":"bytes"}],"name":"createHash","outputs":[{"name":"","type":"bytes32"}],"payable":false,"stateMutability":"view","type":"function"}],
+    "keyStorage": [{"constant":true,"inputs":[],"name":"AUTHORIZED","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"keyStation","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"nonce","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[{"name":"_keyStation","type":"address"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":false,"name":"_keyStation","type":"address"}],"name":"Initialized","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_target","type":"address"},{"indexed":false,"name":"_new","type":"string"}],"name":"Set","type":"event"},{"constant":false,"inputs":[{"name":"v","type":"uint8[2]"},{"name":"r","type":"bytes32[2]"},{"name":"s","type":"bytes32[2]"},{"name":"_nonce","type":"uint256"},{"name":"_target","type":"address"},{"name":"_new","type":"string"}],"name":"setStorage","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"v","type":"uint8"},{"name":"r","type":"bytes32"},{"name":"s","type":"bytes32"},{"name":"_nonce","type":"uint256"},{"name":"_target","type":"address"},{"name":"_word","type":"string"}],"name":"getStorage","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_nonce","type":"uint256"},{"name":"_target","type":"address"},{"name":"_string","type":"string"}],"name":"createHash","outputs":[{"name":"","type":"bytes32"}],"payable":false,"stateMutability":"view","type":"function"}]
+  },
+  "contract":{
+    "local":{
+      "keyStation": "0x1DDb20B1aEb38a01654C2adD1A800155ED41218E",
+      "cloneableWallet": "0x8434b5d468574371c686F47FB876aD881abe08f1",
+      "walletFactory": "0xAb9B6b433b5d2f3F61Eb60c2cc70Af077D710188",
+      "keyStorage": "0xdE3a6f1b56e8CbC9DdfFB475dbD7041229D07010"
+    },
+    "development":{
+      "keyStation": "0x1DDb20B1aEb38a01654C2adD1A800155ED41218E",
+      "cloneableWallet": "0x8434b5d468574371c686F47FB876aD881abe08f1",
+      "walletFactory": "0xAb9B6b433b5d2f3F61Eb60c2cc70Af077D710188",
+      "keyStorage": "0xdE3a6f1b56e8CbC9DdfFB475dbD7041229D07010"
+    },
+    "staging": {
+      "keyStation": "",
+      "cloneableWallet": "",
+      "walletFactory": "",
+      "keyStorage": ""
+    },
+    "production": {
+      "keyStation": "",
+      "cloneableWallet": "",
+      "walletFactory": "",
+      "keyStorage": ""
+    }
+  },
+  "node": {
+    "local":{
+      "https": "https://rinkeby.infura.io",
+      "wss": "wss://rinkeby.infura.io/ws"
+    },
+    "development":{
+      "https":"https://rinkeby.infura.io",
+      "wss":"wss://rinkeby.infura.io/ws"
+    },
+    "staging": {
+      "https":"https://mainnet.infura.io",
+      "wss":"wss://mainnet.infura.io/ws"
+    },
+    "production": {
+      "https":"https://mainnet.infura.io",
+      "wss":"wss://mainnet.infura.io/ws"
+    }
+  },
+  "screens": {
+    "appIntro": {
+      "slides": [
+        {
+          "key": "somethun",
+          "title": "Contract Wallet",
+          "titleStyle": {"fontSize": 35, "color": "#404040"},
+          "text": "Description.\nSay something cool",
+          "textStyle": {"color": "#000"},
+          "image": "require('../../assets/images/undraw_Savings_dwkw.png')",
+          "imageStyle": {"width": 300, "height": 250},
+          "backgroundColor": "#fff"
+        },
+        {
+          "key": "somethun-dos",
+          "title": "Gas fee",
+          "titleStyle": {"fontSize": 35, "color": "#404040"},
+          "text": "Other cool stuff",
+          "textStyle": {"color": "#000"},
+          "image": "require('../../assets/images/undraw_connected_world_wuay.png')",
+          "imageStyle": {"width": 310, "height": 270},
+          "backgroundColor": "#fff"
+        },
+        {
+          "key": "somethun1",
+          "title": "Key Management",
+          "titleStyle": {"fontSize": 35, "color": "#404040"},
+          "text": "I m already out of descriptions\n\nLorem ipsum bla bla bla",
+          "textStyle": {"color": "#000"},
+          "image": "require('../../assets/images/undraw_unlock_24mb.png')",
+          "imageStyle": {"width":250, "height":250},
+          "backgroundColor": "#fff"
+        },
+        {
+          "key": "somethun1",
+          "title": "Create Wallet",
+          "titleStyle": {"fontSize": 35, "color": "#404040"},
+          "text": "I m already out of descriptions\n\nLorem ipsum bla bla bla",
+          "textStyle": {"color": "#000"},
+          "image": "require('../../assets/images/mello.png')",
+          "imageStyle": {"width": 270, "height": 270},
+          "backgroundColor": "#fff"
+        }
+      ]
+    },
+    "setting": {
+      "users": [
+        {
+          "name": "一般設定",
+          "icon": "build",
+          "subtitle": "You can make general settings.",
+          "uri": "https://twitter.com/Daiki_k21"
+        },
+        {
+          "name": "プロフィール",
+          "icon": "face",
+          "subtitle": "You can set profile settings.",
+          "uri": "https://twitter.com/Daiki_k21"
+        },
+        {
+          "name": "画面設定",
+          "icon": "phonelink-setup",
+          "subtitle": "You can set screen settings.",
+          "uri": "https://twitter.com/Daiki_k21"
+        },
+        {
+          "name": "利用規約",
+          "icon": "security",
+          "subtitle": "You can see the terms of service.",
+          "uri": "https://docs.google.com/document/d/1dvHim2yzTXIt_ySZmb7sxCVtMpnMt4CKJQlpZ3dWm9E/edit?usp=sharing"
+        },
+        {
+          "name": "プライバシーポリシー",
+          "icon": "new-releases",
+          "subtitle": "You can see the privacy policy.",
+          "uri": "https://docs.google.com/document/d/1sLTECxh_OVooPFcH_Yo3qcU9X20ObUc7wEeiZMPY-UE/edit?usp=sharing"
+        },
+        {
+          "name": "運営詳細",
+          "icon": "business",
+          "subtitle": "You can see the operation details.",
+          "uri": "https://twitter.com/Daiki_k21"
+        }
+      ]
+    },
+    "wallet": {
+      "qrIcon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAhFBMVEX////i4uIzMzOZmZkREREtLS2cnJxubm7k5OT7+/vp6ent7e3w8PAlJSXm5ub09PQAAACSkpIqKioWFhY3NzcbGxvQ0NALCwsgICCqqqq9vb3W1ta0tLSnp6ehoaFcXFxERER7e3vFxcWKiopUVFQ/Pz9lZWV1dXVMTExpaWmEhIRVVVWk/0/yAAANiklEQVR4nN2d6XriOBBFwQ7EG14gBEL2dCfp5f3fb2xAspaSvOjK0FO/er4hto+qdKskS/Js5t/iosjSNMnzPDpZ/a8kTbOiiCe4u1eLizSJ5naLkvTfBK3h8g420fJ/CzPOkgFwrSXZP0FZpF1xabMoLS4NYLdiSGQaXXm1kBC864WMO7pelCdNgjhZnTqSvCOY0+vqk5nxcZtkYJTJOlFa0kl+NY6MU8MT9s0A5sxyFY6kw3O48McZSZlcmpFSl/GKT2aaizLGOl/umLUpV+aXYtT5ogxyXV23LuNHrf8BZUEXrxR27b6WqZGElnath0+bOwoljrxEkarSU3ZH5dbespYarFOFajHlbRXGSUI1mZBvpvkx8X0/xYH+7zfT+qNnN0oNOlnXl4XNZ9jE0YSNKZmUnHJvtymmaknKkgkaV4zQaPoySmpfSHmomlhjTF9DNSa6Ea9xUhe81OBbdGPk8dqTpAjapOEMtKOIgF66QG9L/SBmvlpuhImNDestAqC/VNTbREUAIQqBcRkNVU3QVEiXSeFN5mwpFPEKAaXO6IwoAF5aY0TDIV4pYK03oNBqVRRdQjgbBrG4XkAJcXR4eQEETqo6I8ZePHjrBXHcBVz/nrSP1x+4i7WIo2qttoxHVrjV7Q2wwVrEEQOe1Afg7CG8Xb0Cr9dKxeC02P4pspJ5rJa3i80BeMVirCNiL4CzMKwJgwAZFW2sDfs7PkKBjiYO1ZFwBRQbYaQxSG14w0BnLLLq7MMdtIDg3hjQFXlwY0uZh/BMuECKjdCj+ke/FxmtZYYRBluk2IxwCM+E2AFhGHLCYA1tO96peqoGbxLstOGhEgixYtP6pF/DjZTfDksr0YfBBnp13hV7xWkyrD362nMoES7+Qq/O465HnA757QB7rGRCsNgM8YufRHGSGZEQLDb8uTvzftq/LYbYodIIwWLDY68jAfAui43RtNJ9CBabNk77/Qwco88hQbj4Cb0Hd461eOvr6oH2WFGEwfYJehc+MWjrYCxzYl/AxGFIEgYLbGdnJbilhxV9WmG4HSoDoS+xMT9+j0YYYWll8mGww4oNC0FjucnbAHpbQWY0QnBlE3c5kbkQ+x77sTITosUmsTvRjwtFmdEJgxW0y3c4MffiwkNlJ/wDvRtzIqkksRcXppXdhwFygrgDIvHiwuewgxBc2Vgo/LjwseoiBIuNBYMNKqC5UJEZkhA8jGJqotedXsqZg+pCihArNiwjaIUn+x/Q2SdVZmjCYPOIvGlkcJXZuQ72ogGShItfyJuyIYbS3VgHhY4LNZkxEILFhtYaBo5MFbrMmAiDNTJ0EjIcI5LbzXSZMRJCxaagwpQFKVJnCJkxEmKHUVSYZqRj3UytZqyE0MomJWg8BCklM2ZCqNjEeph6CNKYBjQSBntg/OgO8xCkBxrQTLgGig0L0zbp5/AgTQwuNBMGN7jKRg9TfJAS1UwXIbKyUWvTAh6k9yYXWgiD7QPs/okSlHrYOppJZuyEwQrWxKrPcnRN+mQEtBKu31EPoHZEqspxsdzsQishcBgVSR0R3g2NMtNFiBMb1vFO/8WyIaobmmWmizDYo8RG9lqC7YbkoKknIUxsWEc8jQbB2dAiM92E62/QU0QClIzrbMZqphchrLIRA5OFLKgb2mSmByFKbJi4qP92N6vM1IDVzzsrIUpsRL+pFY6TWaqZGm/54+96v1vfWSG3ELFhfa+5WI4UGls1s/zza70IVje73crGCKpshDIGWdGYq5nl8vtz3QCsbmrb7QMzI0ZsBMchKxqTzCzD22B9ev4jYc24MTIu3hCP0oppDCSkZWa5rF4XXEHPhA3jwsAIEZu2bgMmC1Jmann5uRJXmNxw25lEByE2hUbofk1KZpbL90ZeApLwxiQ6CLFpPZfCqlJdZpbhWV5MhA3kluiQm3vnp2l735kQsM5LlZll+DtQ+XRCUnQQYsMJE1Q6lGWmkZc1+YpCI6wZb9QOuX9GEWYsbzinw0Ja23XK7pRRhESH3DsPBCJGGIEIn0S+9zc9PK2EDeRKDFb3YRQH4850s1Zm6ux+Z+SzECqic+MqNjmYkMnMsvoK7KN4M6FUBTiLDRcYTElzkpk6u7+u7OM/O2HTIRfnDrl/uSbCo8xY5KU/YSOsZ9FxrGywhE9HedGy+yjCBnLfMDqKDU/0CMKo6pCXgYRn0XGrbHixhlCal+pr0RmegwhPovPm8lB8dgZAeHjr7n6DCRvRKV3EhhNG7oRxeNMvQocRlmXlMqTLWJQCCOuY/71BE+7KV7daWSV0rdru7/ZQwnLz4fhEXGlQlffsZd8rVHsRlmXo/Dw8W8AIZ9n3pofg9CDclV+Ax+GEsPFhbfe/ukO1u6YpF+4j/JlQ0+DG+I09dIZqF2HplCIE48GJm6c5WvG+s4eqnbAsv1GvormEZu6EcqZ5/LkdS7gr7+T5bpcZQJ4GAbOJ8YPci59Wq1GEZSlPBT/+dfEnL7gRM8LJjyfpz+MfZlU1Epblu3SR4r10eYHRzibGAMLZR1XJ+jc3hqqBcFd+yjwP+93S5ZEEz3FWF3sOq6Usx4eADlWasNzJ60vvP/drt72JQu8DDC5Og/zqSWqluCJDlSIsyz9SCB1rh71b1hdW1IirFsbbcUmwEqr5F1GPE3Pe5U/Z/S+bOqm6npeVtHketJzm6Yi4lDX5Q6/HNcJSYfn4bP7Geb5UcJy8QGq0nRcKKaE6W27XVsJ6ECj9PjmPw+5c3/YJnQ/1ApHNCVfysCe93ZgJ60Gg3NvCc4M4v+kWX/zCXgJ/MEQlVO8/9zThrtzKrfFxd9bfvezYESb5bc4KOFfjOyyqB1mZn4V6fCUEqJzwoleWQwHLhqS+l7eq42ZZ+/pJCdXsm9fjK+5AZRAoJJeN+7NIUCCpmUm7SKpQ7kmPv7Yi4a4M5MxyEGpZxO4SKTCBaxUehHeI1bPso4f9ihOWpfwGdP5XKPLWv90fRBYX4OJEeW1pdZBL6T83iyOhOggs/khjygVghKisCp5DqprTpaRX3Vqo1vX4Squxn9ZSBes8ydaYskcGuXZP2XRYPStDx7U2CPwlj0IwWxEVp0EXeqsrMipl6PgiB+i7Up5jlnypi/Ohq4QzbVVNZZ460yeuMFsttT0yc1RGbExf3Fa90Fe+f9Pq8q37KpPGzmV3O5qALqKVUgYdqkejJpDXmINN9b1r2D0l5AI+LVRfqPdVoG2WxH5KYL6YGTbIyvX4xyc1O446JZrYTwneYvlErjOtHlibJtTgv04UoJ1d1KZf9NanJUXI6/FQHRWfE8Ud6O7Upl9GjTqJzrStpArnsw/DJBxu5xq5M52FKWp314dxSfu36W3x3ml6VDB6ZzoLU9i5GPR5A5Y9M7gzB6gDB2ZcTWH7SAuDE42EW9gGzzktm/SBIA428EyFDexMBfLgj5nl8KHRRm+fMRDCduVZJMV0+NB4G0SI20dudJXh8CEHi/qfTwNYm8/M0t0MHdTBqJRBErpPj3KzHTvn4cC2vidhveFuaaPwcOiePhomCbfA87cYBNmvPRycqI+GCULgeRjchfQoycfJidpoWCdcf+Fu13UILcskwJ6ojYZ1Qtx5H10u9HMI7bzqIIRMj56t8xxhH06c9AzajmOEZ33aYIQtbYSLT+Cd+hxH7uNMdvlkOoUQ+vWAqNOFghORR9NJpY1M6LovRrJe5+r3/YTCMHs2EWIPLGeP3qEiPX82yMTRsETouChItr7O6efqgWb4+oOfj+h1djD2Q+hZre0EqkC4wo16Z0Oe28+3gpYEofOiINGGfMPJy/ee+BbTlnCHPB95mF/Yj6F6ylIGJ9y776gQbNgz+/numvrNLuj5z0O/hZcM/H0vK+Tvrm2hZdNg7eA+x6eMMyH0fOsRH6T08w3Lp5YQsSiotTEO8fId0ljwITL+x3yH1NO3ZCP+pVXc9OjYb8l6+h6wj6/ljv0esKdvOr80hMjpUZfn9PJd7qz5ajXyyzIO3+X29G31+/B2g1kUdDSnb6sLagOdQP0Cfu24BRxXP7R/D0yL8RduSr19wLE+KHwg4oRLABzdj7wgogwBKMxpXB+iAOgUFimkoTwYCvBqEdv+4/4yMIU1FtCQgFeJmEIBpethP1A61hIwoKio4M/ojrO21sIFlYAYXVpvhC6I7DWeLjvChMbGiruIeMnOmPsCrDOsEP0Xi1SxnT0ogth8l3GjoKHY2WpmQta4hBtFB4I/B0vfY2o3ig70p3ZiZ5xWVEUJ9ZuUU+lOU4VqIbWspwjlNxPvNU2oxqLGTaEA0v18N2jNl07fprIbPTPKfJP1/US+rbd2Vfw3pX7LXb++tY/OESsNOZmwnSyT7z5P0PFT5ModJq/41RaeRxmujdXwvFCdGKutPM8xH8HJtAsnF6v1tUdxjlYC73J8jRGM83x0uBZppF/uonzHpyIY68caTFkQzrsGvsZ0WTj7Mi36PV5cpCSdpyw0yjIiuk4WJVlhBI2LIk2Mf4rRLZgVavJQQKM8SdI0O1maJkkeGdGuzH2t0T1ylMHrB5RRUv8/wjtbR7h2WJReOd7JRroySnpq73WYOQOQ1juzXJnFtmTA2Op08k/CiVanvSZB5PkxQ0R15sjzJnWYEyXS/gPN58uvZFwunwAAAABJRU5ErkJggg==",
+      "menus": [
+        {
+           "name": "Setting",
+           "icon": "build",
+           "uri": "https://twitter.com/Daiki_k21"
+        },
+        {
+          "name": "Recover",
+          "icon": "face",
+          "uri": "https://twitter.com/Daiki_k21"
+        },
+        {
+           "name": "Terms",
+           "icon": "security",
+           "uri": "https://docs.google.com/document/d/1dvHim2yzTXIt_ySZmb7sxCVtMpnMt4CKJQlpZ3dWm9E/edit?usp=sharing"
+        },
+        {
+          "name": "Privacy Policy",
+          "icon": "new-releases",
+          "uri": "https://docs.google.com/document/d/1sLTECxh_OVooPFcH_Yo3qcU9X20ObUc7wEeiZMPY-UE/edit?usp=sharing"
+       },
+        {
+          "name": "Operation",
+          "icon": "business",
+          "uri": "https://twitter.com/Daiki_k21"
+       }
+      ]
+    }
+  }
+}
