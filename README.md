@@ -1,9 +1,12 @@
 <p align="center">
   <img src="./static/Logo_step_wallet.png" width="1280">
 </p>
-![Badge Status](https://travis-ci.org/SafeTurtle/stepwallet.eth.svg?branch=master)
-![Badge Status](https://img.shields.io/amo/stars/dustman)
-![Badge Status](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2FDaiki_k21)
+
+![node](https://img.shields.io/node/v/expo-cli)
+![version](https://img.shields.io/github/v/release/SafeTurtle/stepwallet.eth)
+![build](https://travis-ci.org/SafeTurtle/stepwallet.eth.svg?branch=master)
+![stars](https://img.shields.io/amo/stars/dustman)
+![twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2FDaiki_k21)
 
 ## Name
 #### STEP WALLET
