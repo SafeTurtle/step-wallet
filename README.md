@@ -20,7 +20,7 @@ https://github.com/SafeTurtle/step-wallet.git
 
 ## 🎫 Licence
 
-[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
+[![Apache License](https://img.shields.io/badge/License-Apache-blue.svg?style=flat)](LICENSE)
 
 ## 👀 Author
 
