@@ -34,7 +34,7 @@
       },
       "config": {
         "googleSignIn": {
-          "reservedClientId": "com.googleusercontent.apps.538365545759-uf0cdohaiesod91ua7rkpandmc0u6lob"
+          "reservedClientId": ""
         }
       }
     },
