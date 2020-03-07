@@ -4,7 +4,7 @@
 
 ![node](https://img.shields.io/node/v/expo-cli)
 ![version](https://img.shields.io/github/v/release/SafeTurtle/stepwallet.eth)
-![build](https://travis-ci.org/SafeTurtle/stepwallet.eth.svg?branch=master)
+![build](https://img.shields.io/github/workflow/status/SafeTurtle/stepwallet.eth/Node%20CI)
 ![twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2FDaiki_k21)
 
 ## Name
