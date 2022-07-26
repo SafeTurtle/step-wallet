@@ -24,4 +24,4 @@ https://github.com/SafeTurtle/step-wallet.git
 
 ## 👀 Author
 
-[Daiki0129](https://github.com/Daiki0129)
+[cookunijs](https://github.com/cookunijs)
